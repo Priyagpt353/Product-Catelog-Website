@@ -1,0 +1,18 @@
+ul li{
+    margin-right: 10px;
+    padding: 10px;
+}
+.logout{
+    position: absolute;
+    left:84%;
+}
+.username{
+    position: absolute;
+    left:74%;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+.navbar{
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+}

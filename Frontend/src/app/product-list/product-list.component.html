@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand p-3" ><i class="fa fa-shopping-cart"></i>&nbsp; Shopping Mart</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item username">
+            <button type="button" class="btn btn-primary" routerLink="../dashboard">Dashboard</button>
+        </li>
+        <li class="nav-item logout">
+            <button type="button" class="btn btn-danger" routerLink="">Logout</button>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+  <div class="container">
+    <br/><b>Filter by</b>
+    <app-filter
+    [list]="filterList" 
+    (onFilterChange)="filterChange($event)" >
+ </app-filter>
+  </div>
+
+  <div class="container">
+    <br/>
+    <h2 class="text-center"> All Products</h2>
+    <hr/>
+    <br/>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4" *ngFor="let item of list">
+                <div class="card">
+                    <img class="card-img-top" src="../../assets/picture/image3.jpg" alt="image">
+                    <div class="card-body">
+                        <h4 class="card-text">{{item.p_name}}</h4>
+                      </div>
+                      <div class="card-body">
+                          <p class="card-text">from the brand {{item.p_brand}}</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text"><b>Price </b>{{item.p_price}}</p>
+                        </div>
+                        <button type="button" routerLink="../view-product/{{item.id}}" class="btn btn-warning">View Details</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<br/>

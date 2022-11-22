@@ -1,0 +1,47 @@
+<div class="content">
+    <br/>
+    <a routerLink="../home" class="arrow"><i class="fa fa-arrow-circle-left" style="color: orange;"></i></a>
+    <br/><br/>
+    <div class="container card">
+        <div class="row">
+            <div class="col-lg-4 image-part">
+                <h4 class="mt-5 text-center">Login</h4>
+                <p class="text-center">Login to see the products</p>
+                <img class="image" src="../../assets/picture/image7.png"/>
+            </div>
+            <div class="col-lg-8">
+                <form class="text-center p-5" (ngSubmit)="loginUser()">
+    
+                    <p class="h4 mb-4">Login</p>
+                    <hr>
+                    <!-- Email -->
+                    <input type="email" id="emailId" class="form-control mb-4" placeholder="E-mail" [(ngModel)]='user.emailId'  name="emailId" required>
+                    
+                    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password" [(ngModel)]='user.password' name="password" required>
+                    <div class="d-flex justify-content-around">
+                        <div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                                <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="">Forgot password?</a>
+                        </div>
+                    </div>
+                    <button class="btn btn-info btn-block my-4 login" type="submit">Login</button>
+                    <p>Not a member?
+                        <a routerLink="../registration">Register</a>
+                    </p>
+                    <p>or sign in with:</p>
+                
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="mx-2" role="button"><i class="fab fa-github"></i></a>    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

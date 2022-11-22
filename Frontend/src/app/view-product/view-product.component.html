@@ -1,0 +1,119 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand p-3" ><i class="fa fa-shopping-cart"></i>&nbsp; Shopping Mart</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item username">
+            <button type="button" class="btn btn-primary" routerLink="../../dashboard">Dashboard</button>
+        </li>
+        <li class="nav-item logout">
+            <button type="button" class="btn btn-danger" routerLink="">Logout</button>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+  <br/>
+  <br/>
+  <div class="container">
+    <a routerLink="../../product-list"><i class="fa fa-arrow-circle-left" style="color: blue;"></i></a><hr/>
+    <br/><br/>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="../../assets/picture/image2.jpg" class="image">
+                <hr/>
+                <div class="row">
+                    
+                    <div class="col-lg-3">
+                        <img src="../../assets/picture/image4.jpg" class="image1">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="../../assets/picture/image8.jpg" class="image1">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="../../assets/picture/image2.jpg" class="image1">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="../../assets/picture/image3.jpg" class="image1">
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <table class="table table-borderless" >
+                    <tbody>
+                        <tr>
+                            <td>
+                                <small>Buy a product at a very less price</small>
+                                <h2>{{list.p_name}}</h2>
+                                
+                                <span>From the brand <b><i>{{list.p_brand}}</i></b></span><br>
+                                <br/>
+                                <span class = "fa fa-star checked"></span>
+                                <span class = "fa fa-star checked"></span>
+                                 <span class = "fa fa-star checked"></span>
+                                <span class = "fa fa-star checked"></span>
+                                <span class = "fa fa-star unchecked"></span>
+                                <span>&nbsp; 98 ratings</span>
+                                <hr/>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: 20px;">Price :<span style="color: red;font-size:25px;"><i class="fa fa-inr" aria-hidden="true"></i>
+                                    {{list.p_price}}</span>&nbsp;&nbsp;<del><i class="fa fa-inr" aria-hidden="true"></i>2000</del>&nbsp;
+                                <small>Inclusive of all taxes</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Fit : </b><span>True to Size</span><br/>
+                                    <b>Size: </b>{{list.p_size}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Product Code  </b><span>{{list.p_code}}</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Description  </b><span>{{list.p_desc}}</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><hr/>
+                                    <p><b>DELIVERY OPTIONS</b>&nbsp;<i class="fas fa-truck" style="font-size:24px"></i></p>
+                                    <form class="form" [formGroup]="searchResult" (ngSubmit)="search1()">
+                                    <input class="form-control" type="search" placeholder="Enter Pincode" formControlName="pincode">
+                                    <small>Please enter PIN code to check delivery time & Pay on Delivery Availability
+                                    </small><br/>
+                                        <button class="btn btn-outline-success" type="submit" >Check</button>
+                                      </form>
+                                      <div class="delivery" *ngIf="deliveryDetails.pincode">
+                                        <ul>
+                                            <li>
+                                                Get it in {{deliveryDetails.days}} Days &nbsp;<i class="fa fa-shipping-fast"></i>
+                                            </li>
+                                            <li>
+                                                Pay on delivery available&nbsp;<i class="fa fa-money" aria-hidden="true"></i>
+
+                                            </li>
+                                            <li>
+                                                Easy 30 days return & exchange available &nbsp;<i class="fa fa-sync-alt"></i>
+                                            </li>
+                                        </ul><hr/>
+                                      </div>    
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br/><br/>
+  </div>

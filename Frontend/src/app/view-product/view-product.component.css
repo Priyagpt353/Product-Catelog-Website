@@ -1,0 +1,48 @@
+.fa{
+    font-size: 25px;
+}
+.image{
+    width: 500px;
+    height: 500px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.image:hover{
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+}
+.checked{
+    color: orange;
+    font-size: 25px;
+    padding-left: 7px;
+}
+.unchecked{
+    font-size: 25px;
+    padding-left: 7px;
+}
+td{
+    padding-top: 10px;
+}
+.image{
+    border-radius: 20px;
+    padding: 2px;
+}
+.delivery ul li{
+    list-style: none;
+    margin-top: 10px;
+    
+}
+.image1{
+    width: 120;
+    height: 120px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    margin-top: 2%;
+    border-radius: 10px;
+    border: solid black 1px;
+    padding: 2px;
+}
+.logout{
+    position: absolute;
+    left:84%;
+}
+.navbar{
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+}

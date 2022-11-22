@@ -1,0 +1,27 @@
+.logout{
+    position: absolute;
+    left:84%;
+}
+.card img{
+    height: 300px;
+}
+.card{
+    margin-top: 5%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card:hover {
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+  }
+  .app-btn {
+    height: 32px;
+    width: 110px;
+    background:blue; 
+    border: none;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .navbar{
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+}

@@ -1,0 +1,43 @@
+
+.card{
+    border:none;
+    margin-top:1%;
+    width:800px;  
+    background-color:white;
+    border-radius: 15px;
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+
+.fa{
+    font-size: 25px;
+    color: orange;
+}
+a{
+    color: orange;
+
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .login{
+    padding: 8px 170px;
+    background-color: orange;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+.image-part{
+    background-color: RGB(5, 99, 253);
+    color: white;
+}
+.image{
+    margin-top: 40%;
+    width: 250px;
+    padding-left: 1%;
+    
+}
+.arrow{
+    padding-left: 40px;
+}

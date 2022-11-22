@@ -1,0 +1,18 @@
+.footer-copyright{
+    background-color: RGB(16, 115, 253);
+    box-shadow: 20px 18px 16px 0 rgba(0,0,0,0.2);
+}
+.page-footer{
+    background-color: RGB(5, 99, 253);
+    color: white;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+.content{
+    padding:0 15px;
+}

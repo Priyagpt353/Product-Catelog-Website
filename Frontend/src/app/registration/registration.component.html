@@ -1,0 +1,48 @@
+<div class="content">
+    <br/>
+    <a routerLink="../home" class="arrow"><i class="fa fa-arrow-circle-left" style="color: orange;"></i></a>
+    <br/><br/>
+    <div class="container card">
+        
+        <div class="row">
+            <div class="col-lg-4 image-part">
+                <h4 class="mt-5 text-center">Register New user</h4>
+                <p class="text-center">Register yourself to see the products</p>
+                <img class="image" src="../../assets/picture/image7.png"/>
+            </div>
+            <div class="col-lg-8">
+                
+                    <!-- Default form register -->
+                <form class="text-center p-5"  (ngSubmit)="userSignup()">
+                
+                    <p class="h4 mb-4">Sign up</p><hr/>
+                
+                    <div class="form-row mb-4">
+                        <div class="col">
+                            <!-- First name -->
+                            <input type="text" id="firstName" class="form-control" placeholder="First name" [(ngModel)]="user.firstName" name="firstName">
+                        </div>
+                        <br>
+                        <div class="col">
+                            <!-- Last name -->
+                            <input type="text" id="lastName" class="form-control" placeholder="Last name" [(ngModel)]="user.lastName" name="lastName">
+                        </div>
+                    </div>
+                    <!-- E-mail -->
+                    <input type="email" id="emailId" class="form-control mb-4" placeholder="E-mail" [(ngModel)]="user.emailId" name="emailId">
+                    <!-- Password -->
+                    <input type="password" class="form-control" placeholder="Password" [(ngModel)]="user.password" name="password"><br/>
+                    <input type="password" class="form-control" name="cpassword" placeholder="Confirm Password" [(ngModel)]="user.cpassword">
+                    <button class="btn btn-info my-4 btn-block login" type="submit">Sign up</button>
+                    <hr>
+                    <!-- Terms of service -->
+                    <p>By clicking
+                        <em>Sign up</em> you agree to our
+                        <a href="" target="_blank">terms of service</a><br>
+                        <a routerLink="../login"> Have an account already?</a>
+                </form>
+                <!-- Default form register -->
+                </div>
+            </div>
+        </div>
+    </div>

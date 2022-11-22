@@ -1,0 +1,21 @@
+ul li{
+    margin-right: 10px;
+    padding: 10px;
+}
+.login{
+    position: absolute;
+    left:75%;
+}
+
+.registration{
+    position: absolute;
+    left:84%;
+}
+.logout{
+    position: absolute;
+    left:84%;
+}
+.navbar{
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+}
+

@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand p-3" ><i class="fa fa-shopping-cart"></i>&nbsp; Shopping Mart</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class=>
+            <form class="form-inline center-block search" [formGroup]="searchResult" (ngSubmit)="searchProduct()">
+                <div class="input-group">
+                  
+                  <input type="text" class="form-control" placeholder="Enter Id, Name or Brand" formControlName="searched" name="search">
+                  <button type="submit" class="btn btn-warning"><i class="fa fa-search" style="color: white;"></i></button>
+                </div>
+              </form>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="btn btn-danger" routerLink="../product-list">All Products</button>
+        </li>
+        <li class="nav-item username">
+            <span>Hii User</span>
+        </li>
+        <li class="nav-item logout">
+            <button type="button" class="btn btn-danger" routerLink="">Logout</button>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="container pt-4" *ngIf="condition">
+        <h4 class="text-center">Your search result is here</h4><hr>
+        <br/><b>Filter by</b>
+    <app-filter
+    [list]="filterList" 
+    (onFilterChange)="filterChange($event)" >
+ </app-filter>
+        
+      </div>
+      <div *ngIf="condition1"><br />
+        <h4 class="text-center" style="color: red;">No Search result based on your search</h4>
+        <hr>
+      </div>
+      <div class="col-lg-4" *ngFor="let item of list"><br>
+        
+        <div class="card">
+            <img class="card-img-top" src="../../assets/picture/image3.jpg" alt="image">
+            <div class="card-body">
+                <h4 class="card-text">{{item.p_name}}</h4>
+              </div>
+              <div class="card-body">
+                  <p class="card-text">from the brand {{item.p_brand}}</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-text"><b>Price </b>{{item.p_price}}</p>
+                </div>
+                <button type="button" routerLink="../view-product/{{item.id}}" class="btn btn-warning">View Details</button>
+
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+  
